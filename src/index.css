@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import url('leaflet/dist/leaflet.css');
+
+/* Theme variables */
+@theme {
+  --color-bg: var(--color-zinc-50);
+  --color-bg-elevated: var(--color-white);
+  --color-fg: var(--color-zinc-900);
+  --color-muted: var(--color-zinc-600);
+  --color-primary: var(--color-emerald-600);
+  --color-primary-foreground: var(--color-white);
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg: linear-gradient(160deg, #0f172a 0%, #064e3b 100%); /* dark green → black */
+  --color-bg-elevated: var(--color-zinc-900);
+  --color-fg: var(--color-zinc-100);
+  --color-muted: var(--color-zinc-400);
+  --color-primary: var(--color-emerald-500);
+  --color-primary-foreground: var(--color-white);
+}
+
+/* Root defaults */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-fg);
+  background: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Cards – Always box shadow */
+.card {
+  background: var(--color-bg-elevated);
+  color: var(--color-fg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dark .card {
+  background: var(--color-bg-elevated);
+  color: var(--color-fg);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* Icons – Green for both themes */
+.icon {
+  color: var(--color-primary);
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(10);
+  }
+  50% {
+    transform: translateY(-54px); 
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

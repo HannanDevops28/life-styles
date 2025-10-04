@@ -84,7 +84,6 @@ export function UsersPage() {
       )}
 
       <UsersGrid
-        users={users}
         filtered={filteredUsers}
         loading={loading}
         onPreview={setPreview}

@@ -2,8 +2,8 @@ import type { UsersGridProps } from "../../types";
 import { UserCard } from "../common/UserCard";
 
 
-export function UsersGrid({ users, filtered, loading, onPreview }: UsersGridProps) {
-  if (loading) {
+export function UsersGrid({  filtered, loading, onPreview }: UsersGridProps) {
+  if (loading) { 
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center w-full max-w-7xl mx-auto px-6">
         {Array.from({ length: 12 }).map((_, i) => (

@@ -117,7 +117,6 @@ export interface StatsCardProps {
 }
 export 
 interface UsersGridProps {
-  users: RandomUser[];
   filtered: RandomUser[];
   loading: boolean;
   onPreview: (user: RandomUser) => void;
